@@ -1,0 +1,172 @@
+/* importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+/* contact us container */
+.ContactUs{
+    width: 100%;
+    display: flex;
+    margin-bottom: 61px;
+}
+
+/* the contact us form styles */
+.contact-us-form{
+    width: 60%;
+    height: 496px;
+    background: #C4C4C4;
+    position: relative;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* the contact us title styles */
+.contact-us-title{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: justify;
+    color: #000000;
+    padding: 23px;
+}
+
+/* the contact us img styles */
+.contact-us-img{
+    z-index: 3;
+    position: relative;
+    top: 120px;
+}
+
+/* setting the resize mode of the text area to none and the styles of the textarea */
+.contact-us-form > textarea{
+    resize: none;
+    max-width: 500px;
+    margin-left: 50px;
+    height: 150px;
+    border: none;
+    outline: none;
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+/* the contact form button styles */
+.contact-us-form > button{
+    background: #FFFFFF;
+    border-radius: 100px;
+    margin-left: 50px;
+    width: 122px;
+    height: 48px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 34px;
+    color: #000000;
+}
+
+/* styling the lables inside the form */
+.contact-us-form > label{
+    font-family: Open Sans;
+    margin-left: 50px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+}
+
+/* styling the inputs inside the form */
+.contact-us-form > input{
+    background: #FFFFFF;
+    margin-left: 50px;
+    border-radius: 10px;
+    max-width: 500px;
+    height: 50px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+/* responsivity */
+@media screen and (max-width: 1190px) {
+    .contact-us-img, .contact-us-img > img{
+        z-index: 3;
+        position: relative;
+        transform: scale(0.80);
+        top: -110px; 
+        right: 25%;
+    }
+
+    /* contact us container */
+    .ContactUs{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 61px;
+        margin-top: 190px;
+    }
+
+    /* styling the inputs inside the form */
+    .contact-us-form > input{
+        background: #FFFFFF;
+        margin-left: 50px;
+        border-radius: 10px;
+        max-width: 300px;
+        height: 30px;
+        border: none;
+        outline: none;
+        margin-bottom: 10px;
+    }
+
+    /* setting the resize mode of the text area to none and the styles of the textarea */
+    .contact-us-form > textarea{
+        resize: none;
+        max-width: 300px;
+        margin-left: 50px;
+        height: 100px;
+        border: none;
+        outline: none;
+        background: #FFFFFF;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+
+    /* the contact us form styles */
+    .contact-us-form{
+        width: 60%;
+        height: 406px;
+        background: #C4C4C4;
+        position: relative;
+        left: 10%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .contact-us-img, .contact-us-img > img{
+        z-index: 3;
+        position: relative;
+        transform: scale(0.75);
+        top: -120px; 
+        right: 30%;
+    }
+
+    /* the contact us form styles */
+    .contact-us-form{
+        width: 60%;
+        min-width: 400px;
+        height: 406px;
+        background: #C4C4C4;
+        position: relative;
+        left: 22%;
+        display: flex;
+        flex-direction: column;
+    }
+}

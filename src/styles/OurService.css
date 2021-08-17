@@ -1,0 +1,124 @@
+/* importing the fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+/* ourservice container */
+.OurService{
+    margin-top: 80px;
+}
+
+/* the styles of the services table container */
+.services-table-container{
+    width: 100%;
+    height: 535px;
+    background: #FEE9C1;
+    margin-top: 24px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.right-arrow, .left-arrow{
+    display: none;
+}
+
+/* the services container sections styles */
+.sections-container{
+    width: 98%;
+    height: 512px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* services header styles */
+.services-header{
+    width: 40%;
+    height: 50px;
+    background: #FEE9C1;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* navigation links services styles */
+.navigate-to-service-link{
+    height: 27px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+    color: #343F56;
+    cursor: pointer;
+}
+
+.marketing-link{
+    font-weight: 600;
+    border-bottom: 2px solid #343F56;
+    padding-bottom: 5px;
+}
+
+/* items container styles */
+.items-container{
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* responsivity */
+@media screen and (max-width: 1170px){
+
+    .items-container > .three{
+        display: none;
+    }
+
+    .right-arrow, .left-arrow{
+        display: inline;
+    }
+
+    .services-header{
+        width: 60%;
+        height: 50px;
+        background: #FEE9C1;
+        border-bottom-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    /* navigation links services styles */
+    .navigate-to-service-link{
+        height: 27px;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 27px;
+        color: #343F56;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 860px){
+    .items-container > .two{
+        display: none;
+    }
+
+    .services-header{
+        width: 80%;
+        height: 50px;
+        background: #FEE9C1;
+        border-bottom-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}

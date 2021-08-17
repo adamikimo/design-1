@@ -1,0 +1,55 @@
+/* importing the fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+/* item container */
+.Item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    max-width: 350px;
+    height: 100%;
+    margin-right: 35px;
+    margin-left: 35px;
+}
+
+/* item title styles */
+.item-title{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #0A093C;
+    margin-bottom: 26px;
+}
+
+/* item text styles */
+.item-text{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: justify;
+    color: #000000;
+    margin-bottom: 36px;
+}
+
+/* item button styles */
+.item-btn{
+    outline: none;
+    border: none;
+    width: 315px;
+    height: 46px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+    background: #FF5C00;
+    border-radius: 100px;
+    cursor: pointer;
+}

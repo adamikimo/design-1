@@ -1,0 +1,15 @@
+/* importing the fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* footer link container styles */
+.FooterLink{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-top: 20px;
+    cursor: pointer;
+    max-width: 300px;
+}
