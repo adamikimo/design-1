@@ -2,6 +2,11 @@
 import React from 'react';
 import '../styles/Landing.css';
 import HeroButton from './HeroButton';
+import Hero from '../assets/Hero.png';
+import Prexsels from '../assets/perxels.png';
+import Google from '../assets/Google.png';
+import Udemy from '../assets/udemy.png';
+import Uplers from '../assets/uplers.png';
 
 // component
 const Landing: React.FC = () => {
@@ -55,7 +60,7 @@ const Landing: React.FC = () => {
                 >
                     {/* hero img */}
                     <img 
-                        src='/assets/Hero.png'
+                        src={Hero}
                     />
                     {/* management button */}
                     <div
@@ -96,19 +101,19 @@ const Landing: React.FC = () => {
                 className='Landing-bottom-container'
             >
                 <img 
-                    src="/assets/perxels.png"
+                    src={Prexsels}
                     alt="" 
                 />
                 <img 
-                    src="/assets/udemy.png" 
+                    src={Udemy} 
                     alt="" 
                 />
                 <img 
-                    src="/assets/Google.png" 
+                    src={Google} 
                     alt="" 
                 />
                 <img 
-                    src="/assets/uplers.png" 
+                    src={Uplers} 
                     alt="" 
                 />
             </div>

@@ -2,6 +2,9 @@
 import React from 'react';
 import '../styles/Features.css'
 import Top from './Top';
+import Guy_Mobile_1 from '../assets/guy-mobile-1.png';
+import Guy_Mobile_2 from '../assets/guy-mobile-2.png';
+import Guy_Cards from '../assets/guy-cards.png';
 
 // component
 const Features: React.FC = () => {
@@ -28,7 +31,7 @@ const Features: React.FC = () => {
                 >
                     {/* card img */}
                     <img 
-                        src="/assets/guy-mobile-1.png" 
+                        src={Guy_Mobile_1} 
                         alt="" 
                     />
                     {/* card title */}
@@ -50,7 +53,7 @@ const Features: React.FC = () => {
                 >
                     {/* card img */}
                     <img 
-                        src="/assets/guy-mobile-2.png" 
+                        src={Guy_Mobile_2} 
                         alt="" 
                     />
                     {/* card title */}
@@ -72,7 +75,7 @@ const Features: React.FC = () => {
                 >
                     {/* card title */}
                     <img 
-                        src="/assets/guy-cards.png" 
+                        src={Guy_Cards} 
                         alt="" 
                     />
                     {/* card title */}

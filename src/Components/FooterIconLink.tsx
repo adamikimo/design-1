@@ -2,6 +2,7 @@
 import React from 'react';
 import FooterLink from './FooterLink';
 import '../styles/FooterIconLink.css';
+import useFooterIconLinkImg from '../hooks/useFooterIconLinkImg';
 
 // props interface
 interface FooterIconLinkProps{
@@ -10,6 +11,8 @@ interface FooterIconLinkProps{
 
 // component
 const FooterIconLink: React.FC<FooterIconLinkProps> = ({ icon, children }) => {
+    // calling the hook
+    const img = useFooterIconLinkImg(icon);
     // JSX
     return (
         // icon footer link container
@@ -18,7 +21,7 @@ const FooterIconLink: React.FC<FooterIconLinkProps> = ({ icon, children }) => {
         >
             {/* icon */}
             <img 
-                src={`/assets/${icon}.png`}
+                src={img?.img}
                 alt=""
             />
             {/* rendering the children inside a footer link */}

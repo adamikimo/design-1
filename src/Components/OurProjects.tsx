@@ -3,6 +3,9 @@ import React from 'react';
 import Top from './Top';
 import '../styles/OurProjects.css';
 import OurProjectsCard from './OurProjectsCard';
+import Guy_Desktop from '../assets/guy-desktop.png';
+import Guy_Mobile_Laptop from '../assets/guy-mobile-laptop.png';
+import People_Desktop from '../assets/people-desktop.png';
 
 // component
 const OurProjects: React.FC = () => {
@@ -26,15 +29,15 @@ const OurProjects: React.FC = () => {
                 {/* the cards */}
                 <OurProjectsCard 
                     id="card-one"
-                    img="/assets/guy-desktop.png"
+                    img={Guy_Desktop}
                 />
                 <OurProjectsCard 
                     id="card-two"
-                    img="/assets/guy-mobile-laptop.png"
+                    img={Guy_Mobile_Laptop}
                 />
                 <OurProjectsCard 
                     id="card-three"
-                    img="/assets/people-desktop.png"
+                    img={People_Desktop}
                 />
             </div>
             {/* the circles container */}

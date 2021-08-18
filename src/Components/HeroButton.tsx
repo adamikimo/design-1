@@ -1,6 +1,7 @@
 // imports
 import React from 'react';
 import '../styles/HeroButton.css';
+import useHeroButtonImg from '../hooks/useHeroButtonImg';
 
 // props interface
 interface HeroButtonProps{
@@ -9,6 +10,8 @@ interface HeroButtonProps{
 
 // component
 const HeroButton: React.FC<HeroButtonProps> = ({ text }) => {
+    // getting the correct img of the btn
+    const img = useHeroButtonImg(text);
     // JSX
     return (
         // button container
@@ -20,7 +23,7 @@ const HeroButton: React.FC<HeroButtonProps> = ({ text }) => {
                 className='heroButton_iconContainer'
             >
                 {/* icon */}
-                <img src={`/assets/${text}.png`}/>
+                <img src={img?.img}/>
             </div>
             {/* button text container */}
             <div

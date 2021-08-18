@@ -2,6 +2,9 @@
 import React from 'react';
 import '../styles/SuccessHistory.css';
 import Top from './Top';
+import Man from '../assets/man.png';
+import Bag from '../assets/bag.png';
+import ImgFrame from '../assets/imgFrame.png';
 
 // component
 const SucessHistory: React.FC = () => {
@@ -38,7 +41,7 @@ const SucessHistory: React.FC = () => {
                     >
                         {/* success history icon */}
                         <img 
-                            src="/assets/man.png" 
+                            src={Man} 
                             alt="" 
                         />
                         {/* success history item body amount */}
@@ -65,7 +68,7 @@ const SucessHistory: React.FC = () => {
                     >
                         {/* success history icon */}
                         <img 
-                            src="/assets/bag.png" 
+                            src={Bag} 
                             alt="" 
                         />
                         {/* success history item body amount */}
@@ -92,7 +95,7 @@ const SucessHistory: React.FC = () => {
                     >
                         {/* success history icon */}
                         <img 
-                            src="/assets/imgFrame.png" 
+                            src={ImgFrame} 
                             alt="" 
                         />
                         {/* success history item body amount */}

@@ -1,6 +1,8 @@
 // imports
 import React from 'react';
 import '../styles/Map.css';
+import map from '../assets/map.png';
+import man_2 from '../assets/man-2.png';
 
 // component
 const Map: React.FC = () => {
@@ -26,7 +28,7 @@ const Map: React.FC = () => {
             <div 
                 className="map-map"
                 style={{
-                    backgroundImage: 'url("/assets/map.png")'
+                    backgroundImage: `url(${map})`
                 }}
             >
                 {/* the map card */}
@@ -35,7 +37,7 @@ const Map: React.FC = () => {
                 >
                     {/* the img of the map */}
                     <img
-                        src="/assets/man-2.png"
+                        src={man_2}
                     />
                     {/* the card that is inside the card */}
                     <div 

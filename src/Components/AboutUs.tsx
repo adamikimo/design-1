@@ -1,5 +1,6 @@
 // imports
 import React from 'react';
+import about_us_img from '../assets/about-us-img.png';
 import '../styles/AboutUs.css';
 
 // component
@@ -22,7 +23,7 @@ const AboutUs: React.FC = () => {
                 </div>
                 {/* the about us img */}
                 <img 
-                    src="/assets/about-us-img.png" 
+                    src={about_us_img}
                     alt="" 
                 />
                 {/* the red transparent box */}

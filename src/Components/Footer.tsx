@@ -4,6 +4,10 @@ import '../styles/Footer.css';
 import FooterIconLink from './FooterIconLink';
 import FooterLink from './FooterLink';
 import FooterTitle from './FooterTitle';
+import Facebook from '../assets/facebook.png';
+import Instagram from '../assets/instagram.png';
+import Twitter from '../assets/twitter.png';
+import Linked_in from '../assets/linked-in.png';
 
 // component
 const Footer: React.FC = () => {
@@ -107,19 +111,19 @@ const Footer: React.FC = () => {
                     className="social-icons"
                 >
                     <img 
-                        src="/assets/facebook.png" 
+                        src={Facebook}
                         alt="" 
                     />
                     <img 
-                        src="/assets/instagram.png" 
+                        src={Instagram} 
                         alt="" 
                     />
                     <img 
-                        src="/assets/twitter.png" 
+                        src={Twitter} 
                         alt="" 
                     />
                     <img 
-                        src="/assets/linked-in.png" 
+                        src={Linked_in} 
                         alt="" 
                     />
                 </div>

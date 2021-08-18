@@ -1,6 +1,7 @@
 // imports
 import React from 'react';
 import '../styles/ContactUs.css';
+import Contact_Us_Img from '../assets/contact-us-img.png';
 
 // component
 const ContactUs: React.FC = () => {
@@ -59,7 +60,7 @@ const ContactUs: React.FC = () => {
             >
                 {/* contact us img */}
                 <img 
-                    src="/assets/contact-us-img.png" 
+                    src={Contact_Us_Img} 
                     alt="" 
                     width={200}
                     height={270}

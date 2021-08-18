@@ -1,6 +1,11 @@
 // imports
 import React from 'react';
 import '../styles/OurProjectsCard.css';
+import Clock_Icon from '../assets/clock-time-icon.png';
+import Stack_Of_4_Images from '../assets/4ImgStack.png';
+import Calender from '../assets/calender.png';
+import ImgFrameSmall from '../assets/imgFrameSmall.png';
+import Dollar from '../assets/dollar.png';
 
 // props interface
 interface OurProjectsCardProps{
@@ -30,7 +35,7 @@ const OurProjectsCard: React.FC<OurProjectsCardProps> = ({ id, img }) => {
                     >
                         <img 
                             style={{ margin: 5 }}
-                            src="/assets/clock-time-icon.png" 
+                            src={Clock_Icon} 
                             alt="" 
                         />
                         <div
@@ -44,7 +49,7 @@ const OurProjectsCard: React.FC<OurProjectsCardProps> = ({ id, img }) => {
                         className="img-right-pos"
                     >
                         <img 
-                            src="/assets/4ImgStack.png" 
+                            src={Stack_Of_4_Images} 
                             alt="" 
                         />
                     </div>
@@ -63,7 +68,7 @@ const OurProjectsCard: React.FC<OurProjectsCardProps> = ({ id, img }) => {
                         className="img-footer-item"
                     >
                         <img 
-                            src="/assets/imgFrameSmall.png" 
+                            src={ImgFrameSmall} 
                             alt="" 
                         />
                         Author of publication
@@ -72,7 +77,7 @@ const OurProjectsCard: React.FC<OurProjectsCardProps> = ({ id, img }) => {
                         className="img-footer-item"
                     >
                         <img 
-                            src="/assets/calender.png" 
+                            src={Calender} 
                             alt="" 
                         />
                         Duration of project
@@ -81,7 +86,7 @@ const OurProjectsCard: React.FC<OurProjectsCardProps> = ({ id, img }) => {
                         className="img-footer-item"
                     >
                         <img 
-                            src="/assets/dollar.png" 
+                            src={Dollar} 
                             alt="" 
                         />
                         6,000.00
