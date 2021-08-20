@@ -154,7 +154,29 @@
         z-index: 3;
         position: relative;
         transform: scale(0.75);
-        top: -120px; 
+        top: -90px; 
+        right: 20%;
+    }
+
+    /* the contact us form styles */
+    .contact-us-form{
+        width: 60%;
+        min-width: 400px;
+        height: 406px;
+        background: #C4C4C4;
+        position: relative;
+        left: 22%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .contact-us-img, .contact-us-img > img{
+        z-index: 3;
+        position: relative;
+        transform: scale(0.65);
+        top: -100px; 
         right: 30%;
     }
 

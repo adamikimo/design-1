@@ -1,18 +1,29 @@
 // imports
+import { motion } from 'framer-motion';
 import React from 'react';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 import '../styles/Subscribe.css';
 
 // component
 const Subscribe: React.FC = () => {
+    const { animate, componentRef } = useScrollAnimation();
     // JSX
     return (
         // the subscription parent element
-        <div
+        <motion.div
             className='Subscribe'
+            
         >
             {/* the subscription container */}
-            <div 
+            <motion.div 
                 className="subscribe-container"
+                ref={componentRef as any}
+            initial={{
+                opacity: animate ? 0 : 1
+            }}
+            animate={{
+                opacity: animate ? 1 : 0
+            }}
             >
                 {/* the subscription header */}
                 <div 
@@ -45,8 +56,8 @@ const Subscribe: React.FC = () => {
                         Subscribe
                     </button>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     )
 }
 

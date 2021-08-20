@@ -1,6 +1,10 @@
 // imports
 import React from 'react';
 import '../styles/Nav.css';
+import nav from '../assets/nav.png';
+import {
+    motion
+} from 'framer-motion';
 
 // component
 const Nav: React.FC = () => {
@@ -10,10 +14,18 @@ const Nav: React.FC = () => {
         <div
             className="nav_menu"
         >
-            <img src="/assets/nav.png" alt="" />
+            <img src={nav} alt="" />
         </div>
         {/* nav container */}
-        <div
+        <motion.div
+            initial={{
+                y: -10,
+                opacity: 0
+            }}
+            animate={{
+                y: 0,
+                opacity: 1
+            }}
             className='Nav'
         >
             {/* links container */}
@@ -57,7 +69,7 @@ const Nav: React.FC = () => {
                     Enroll Now
                 </button>
             </div>
-        </div>
+        </motion.div>
         </>
     )
 }

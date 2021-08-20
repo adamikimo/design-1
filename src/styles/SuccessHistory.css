@@ -7,6 +7,8 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 80px;
+    flex: 1;
+    height: 100%;
 }
 
 /* success history bottom container styles */
@@ -35,6 +37,8 @@
     justify-content: space-evenly;
     align-items: center;
     min-width: 135px;
+    height: 50px;
+    overflow: hidden;
 }
 
 /* success history item body amount styles */
@@ -45,6 +49,7 @@
     font-size: 45px;
     line-height: 57px;
     color: #0A093C;
+    overflow: hidden;
 }
 
 /* success history item styles */

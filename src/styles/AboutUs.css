@@ -64,17 +64,20 @@
 
 /* about us title styles */
 .about-us-title{
+    overflow: hidden;
     font-family: Open Sans;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 22px;
+    height: 22px;
     color: #000000;
     color: #FB9300;
 }
 
 /* about us heading styles */
 .heading-about-us{
+    overflow: hidden;
     font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
@@ -83,6 +86,7 @@
     color: #343F56;
     margin-top: 3px;
     margin-bottom: 19px;
+    height: 25px;
 }
 
 /* about us button styles */

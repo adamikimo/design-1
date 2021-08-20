@@ -1,13 +1,16 @@
 // imports
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/SuccessHistory.css';
 import Top from './Top';
 import Man from '../assets/man.png';
 import Bag from '../assets/bag.png';
 import ImgFrame from '../assets/imgFrame.png';
+import { motion } from 'framer-motion';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 // component
 const SucessHistory: React.FC = () => {
+    const { animate, componentRef } = useScrollAnimation();
     // JSX
     return (
         // success history section container
@@ -45,11 +48,22 @@ const SucessHistory: React.FC = () => {
                             alt="" 
                         />
                         {/* success history item body amount */}
-                        <span 
+                        <motion.span 
                             className="successHistory-item-body-amount"
+                            ref={componentRef as any}
+                            initial={{
+                                y: animate ? 0 : 50
+                            }}
+                            animate={{
+                                y: animate ? 0 : 50
+                            }}
+                            transition={{
+                                duration: 0.5    
+                            }
+                            }
                         >
                             5K+
-                        </span>
+                        </motion.span>
                     </div>
                 </div>
                 {/* success history item container */}
@@ -72,11 +86,22 @@ const SucessHistory: React.FC = () => {
                             alt="" 
                         />
                         {/* success history item body amount */}
-                        <span 
+                        <motion.span 
                             className="successHistory-item-body-amount"
+                            ref={componentRef as any}
+                            initial={{
+                                y: animate ? 0 : 50
+                            }}
+                            animate={{
+                                y: animate ? 0 : 50
+                            }}
+                            transition={{
+                                duration: 0.5,
+                                delay: 0.5
+                            }}
                         >
                             200+
-                        </span>
+                        </motion.span>
                     </div>
                 </div>
                 {/* success history item container */}
@@ -99,11 +124,22 @@ const SucessHistory: React.FC = () => {
                             alt="" 
                         />
                         {/* success history item body amount */}
-                        <span 
+                        <motion.span 
                             className="successHistory-item-body-amount"
+                            ref={componentRef as any}
+                            initial={{
+                                y: animate ? 0 : 50
+                            }}
+                            animate={{
+                                y: animate ? 0 : 50
+                            }}
+                            transition={{
+                                duration: 0.5,
+                                delay: 1
+                            }}
                         >
                             600+
-                        </span>
+                        </motion.span>
                     </div>
                 </div>
             </div>

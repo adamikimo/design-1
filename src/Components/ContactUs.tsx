@@ -2,9 +2,13 @@
 import React from 'react';
 import '../styles/ContactUs.css';
 import Contact_Us_Img from '../assets/contact-us-img.png';
+import useScrollAnimation from '../hooks/useScrollAnimation';
+import { motion } from 'framer-motion';
 
 // component
 const ContactUs: React.FC = () => {
+    const { animate: boxAnimationVal, componentRef: boxRef } = useScrollAnimation();
+    const { animate: imgAnimationVal, componentRef: imgRef } = useScrollAnimation();
     // JSX
     return (
         // contact us container
@@ -12,8 +16,21 @@ const ContactUs: React.FC = () => {
             className='ContactUs'
         >
             {/* contact us form */}
-            <div 
+            <motion.div 
+                ref={boxRef as any}
                 className="contact-us-form"
+                initial={{
+                    x: boxAnimationVal ? 0 : 10,
+                    opacity: boxAnimationVal ? 0 : 1
+                }}
+                animate={{
+                    x: boxAnimationVal ? 10 : 0,
+                    opacity: boxAnimationVal ? 1 : 0
+                }}
+                transition={{
+                    delay: 1,
+                    duration: 0.5
+                }}
             >
                 {/* contact us title */}
                 <div 
@@ -53,10 +70,23 @@ const ContactUs: React.FC = () => {
                 <button>
                     Envoyez
                 </button>
-            </div>
+            </motion.div>
             {/* contact us img container */}
-            <div 
+            <motion.div 
+                ref={imgRef as any}
                 className="contact-us-img"
+                initial={{
+                    x: boxAnimationVal ? 0 : -10,
+                    opacity: boxAnimationVal ? 0 : 1
+                }}
+                animate={{
+                    x: boxAnimationVal ? -10 : 0,
+                    opacity: boxAnimationVal ? 1 : 0
+                }}
+                transition={{
+                    delay: 1.5,
+                    duration: 0.5
+                }}
             >
                 {/* contact us img */}
                 <img 
@@ -65,7 +95,7 @@ const ContactUs: React.FC = () => {
                     width={200}
                     height={270}
                 />
-            </div>
+            </motion.div>
         </div>
     )
 }

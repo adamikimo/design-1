@@ -203,6 +203,14 @@
         right: 70%;
         top: 82%;
     }
+
+    /* the styles bottom section of the landing section */
+    .Landing-bottom-container{
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 700px){
@@ -243,14 +251,14 @@
 
     /* big text container in the landing section styles */
     .bigText{
-        width: 282px;
-        height: 148px;
+        width: 237px;
+        height: 78px;
         font-family: Source Sans Pro;
         font-style: normal;
         font-weight: 600;
         font-size: 20px;
-        line-height: 50px;
-        margin-bottom: 400px;
+        line-height: 25px;
+        color: #343F56;
         padding-left: 30px;
     }
 
@@ -310,8 +318,14 @@
     .Landing-bottom-container{
         display: flex;
         padding: 20px;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
-        transform: scale(0.70);
+        transform: scale(0.5);
+        align-self: center;
+        justify-self: center;
+    }
+
+    .Landing-bottom-container > img{
+        transform: scale(0.5)
     }
 }

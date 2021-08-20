@@ -6,6 +6,8 @@ import Stack_Of_4_Images from '../assets/4ImgStack.png';
 import Calender from '../assets/calender.png';
 import ImgFrameSmall from '../assets/imgFrameSmall.png';
 import Dollar from '../assets/dollar.png';
+import { motion } from 'framer-motion';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 // props interface
 interface OurProjectsCardProps{
@@ -15,11 +17,23 @@ interface OurProjectsCardProps{
 
 // component
 const OurProjectsCard: React.FC<OurProjectsCardProps> = ({ id, img }) => {
+    const { animate, componentRef } = useScrollAnimation();
     // JSX
     return (
         // card container
-        <div
-        className={`OurProjectsCard ${id}`}
+        <motion.div
+            className={`OurProjectsCard ${id}`}
+            ref={componentRef as any}
+            initial={{
+                scale: animate ? 0 : 1,
+                y: animate ? 0 : 10,
+                opacity: animate ? 0 : 1
+            }}
+            animate={{
+                scale: animate ? 1 : 0,
+                y: animate ? 10 : 0,
+                opacity: animate ? 1 : 0
+            }}
         >
             {/* the img container */}
             <div 
@@ -102,7 +116,7 @@ const OurProjectsCard: React.FC<OurProjectsCardProps> = ({ id, img }) => {
             <button>
                 More details
             </button>
-        </div>
+        </motion.div>
     )
 }
 

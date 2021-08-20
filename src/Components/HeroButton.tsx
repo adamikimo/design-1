@@ -2,6 +2,9 @@
 import React from 'react';
 import '../styles/HeroButton.css';
 import useHeroButtonImg from '../hooks/useHeroButtonImg';
+import {
+    motion
+} from 'framer-motion';
 
 // props interface
 interface HeroButtonProps{
@@ -15,7 +18,22 @@ const HeroButton: React.FC<HeroButtonProps> = ({ text }) => {
     // JSX
     return (
         // button container
-        <button
+        <motion.button
+            initial={{
+                x: 10,
+                opacity: 0
+            }}
+            animate={{
+                x: 0,
+                opacity: 1
+            }}
+            whileHover={{
+                scale: 1.1
+            }}
+            transition={{
+                type: 'spring',
+                duration: 0.75
+            }}
             className='heroButton'
         >
             {/* icon container */}
@@ -31,7 +49,7 @@ const HeroButton: React.FC<HeroButtonProps> = ({ text }) => {
             >
                 {text}
             </div>
-        </button>
+        </motion.button>
     )
 }
 

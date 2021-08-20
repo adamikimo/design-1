@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/Top.css';
+import useScrollAnimation from '../hooks/useScrollAnimation';
+import { motion } from 'framer-motion';
 
 interface TopProps{
     stHeading: string;
@@ -9,9 +11,22 @@ interface TopProps{
 }
 
 const Top: React.FC<TopProps> = ({ stHeading, ndHeading, rdHeading, variant }) => {
+    const { animate, componentRef } = useScrollAnimation();
     return (
-        <div
-        className='Top'
+        <motion.div
+            className='Top'
+            ref={componentRef as any}
+            initial={{
+                y: animate ? 0 : 10,
+                opacity: 0
+            }}
+            animate={{
+                y: animate ? 0 : 10,
+                opacity: animate ? 1 : 0
+            }}
+            transition={{
+                duration: 1
+            }}
         >
             <div 
                 className={`first-heading-top ${variant}`}
@@ -28,7 +43,7 @@ const Top: React.FC<TopProps> = ({ stHeading, ndHeading, rdHeading, variant }) =
             >
                 {rdHeading}
             </div>
-        </div>
+        </motion.div>
     )
 }
 

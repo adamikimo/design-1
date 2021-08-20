@@ -70,9 +70,18 @@
 @media screen and (max-width: 500px) {
     .footer-top{
         display: flex;
-        align-items: center;
         width: 100%;
         flex: 1;
         flex-wrap: wrap;
     }
+    /* footer section container styles */
+.footer-section-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 35px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
 }

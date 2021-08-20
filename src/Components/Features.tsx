@@ -5,9 +5,12 @@ import Top from './Top';
 import Guy_Mobile_1 from '../assets/guy-mobile-1.png';
 import Guy_Mobile_2 from '../assets/guy-mobile-2.png';
 import Guy_Cards from '../assets/guy-cards.png';
+import { motion } from 'framer-motion';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 // component
 const Features: React.FC = () => {
+    const { animate, componentRef } = useScrollAnimation();
     // JSX
     return (
         // features container
@@ -26,8 +29,23 @@ const Features: React.FC = () => {
                 className="features-bottom"
             >
                 {/* first card container */}
-                <div 
+                <motion.div 
                     className="features-card first-card"
+                    ref={componentRef as any}
+                    whileHover={{
+                        scale: 1.1
+                    }}
+                    initial={{
+                        y: animate ? 0 : 10,
+                        opacity: 0
+                    }}
+                    animate={{
+                        y: animate ? 0 : 10,
+                        opacity: animate ? 1 : 0
+                    }}
+                    transition={{
+                        duration: 0.5,
+                    }}
                 >
                     {/* card img */}
                     <img 
@@ -46,10 +64,25 @@ const Features: React.FC = () => {
                     >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci fusce blandit facilisis enim potenti vulputate quisque. Nunc suspendisse urna lobortis quisque pellentesque tempor, pellentesque tortor. Est, vitae volutpat ullamcorper enim.
                     </div>
-                </div>
+                </motion.div>
                 {/* second card container */}
-                <div 
+                <motion.div 
                     className="features-card center-card"
+                    ref={componentRef as any}
+                    whileHover={{
+                        scale: 1.1
+                    }}
+                    initial={{
+                        y: animate ? 0 : 10,
+                        opacity: 0
+                    }}
+                    animate={{
+                        y: animate ? 0 : 10,
+                        opacity: animate ? 1 : 0
+                    }}
+                    transition={{
+                        duration: 0.5
+                    }}
                 >
                     {/* card img */}
                     <img 
@@ -68,10 +101,25 @@ const Features: React.FC = () => {
                     >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci fusce blandit facilisis enim potenti vulputate quisque. Nunc suspendisse urna lobortis quisque pellentesque tempor, pellentesque tortor. Est, vitae volutpat ullamcorper enim.
                     </div>
-                </div>
+                </motion.div>
                 {/* third card container */}
-                <div 
+                <motion.div 
                     className="features-card last-card"
+                    ref={componentRef as any}
+                    whileHover={{
+                        scale: 1.1
+                    }}
+                    initial={{
+                        y: animate ? 0 : 10,
+                        opacity: 0
+                    }}
+                    animate={{
+                        y: animate ? 0 : 10,
+                        opacity: animate ? 1 : 0
+                    }}
+                    transition={{
+                        duration: 0.5
+                    }}
                 >
                     {/* card title */}
                     <img 
@@ -90,7 +138,7 @@ const Features: React.FC = () => {
                     >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci fusce blandit facilisis enim potenti vulputate quisque. Nunc suspendisse urna lobortis quisque pellentesque tempor, pellentesque tortor. Est, vitae volutpat ullamcorper enim.
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     )
